@@ -12,7 +12,7 @@ def test_create_user(client):
         "last_name": "Lovelace",
         "email": "ada@example.com",
     })
-    assert response.status_code == 999
+    assert response.status_code == 201
     body = response.get_json()
     assert body["first_name"] == "Ada"
     assert body["last_name"] == "Lovelace"
